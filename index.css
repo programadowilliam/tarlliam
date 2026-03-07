@@ -1,0 +1,303 @@
+/* Configurações globais */
+html, body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: #BE1E2D;
+    overflow-x: hidden; /* evita rolagem lateral */
+}
+
+/* Mantém o conteúdo centralizado e adiciona espaço para o player fixo */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 160px; /* espaço para o player sem cortar o conteúdo */
+}
+
+/* Imagens fora do body */
+.container-galeria{
+  position: absolute;
+  top: 150px; /* Ajuste conforme necessário para ficar onde você quer */
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 20px; /* Espaço entre as imagens */
+  justify-content: center; /* Centraliza as imagens horizontalmente */
+  padding: 20px; /* Espaço interno para evitar que as imagens encostem nas bordas */
+  width: min(900px, 90%);
+
+  /* Opcional: ajuda a visualizar a área (remova se não quiser borda) */
+  border: 2px solid rgba(173, 37, 37, 0.9);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+/* Galeria 2 inferior (3 imagens adicionais) */
+.container-galeria-bottom {
+  position: absolute;
+  /*AJUSTE ALTURA AQUI*/
+  top: 480px; /* Ajuste para posicionar no espaço "amarelo" */
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  width: min(900px, 90%);
+
+  border: 2px solid rgba(173, 37, 37, 0.9);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+/*parte dos cards*/
+.card {
+  width: 220px; /* Largura fixa para os cards */
+  border-radius: 12px; /* Bordas arredondadas para um visual mais suave */
+  overflow: hidden; /* Garante que o conteúdo não ultrapasse as bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+  transition: transform 0.3s ease; /* Animação suave ao passar o mouse */
+  background: #fff; /* Fundo branco para os cards */
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Eleva o card ao passar o mouse */
+} 
+
+.card img {
+    width: 100%;            /* A imagem ocupa toda a largura do card */
+    height: 200px;
+    object-fit: cover;      /* Corta a imagem sem distorcer para caber no espaço */
+}
+
+.card-info {
+    padding: 15px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+/*parte de textos*/
+
+h1 {
+    color: white;
+    font-size: 80px;
+    font-family: 'Arial', sans-serif;
+    margin: 0;          
+    text-transform: uppercase;
+}
+/*textos h3*/
+
+.texto1 {
+    position: absolute;
+    top: 790px; /* Ajuste conforme necessário para posicionar o texto */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 10; /* Garante que o texto fique na frente de outros elementos */
+  
+}
+
+h3 {
+    color: white;
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+    margin: 10px 0;          
+    text-transform: uppercase;
+}
+
+p {
+    color: rgb(255, 186, 186);
+    border-radius: 10%;
+    border: #911e29 2px solid;
+    /* O BOX SHADOW Adiciona uma sombra para dar um efeito de profundidade */
+    box-shadow: 5px 5px 10px rgb(66, 6, 6);
+    font-size: 20px;
+    font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif; 
+    margin: 5px 0;  
+  /* O BACKGROUND COLOR Adiciona um fundo vermelho escuro para destacar o texto */
+    background-color: rgb(66, 15, 15);
+     /*transformar todo o texto de um elemento em letras maiúsculas*/
+        text-transform: uppercase;
+  /*deixar o texto neon*/
+    text-shadow: 0 0 5px rgb(255, 0, 0), 0 0 10px rgb(255, 0, 0), 0 0 20px rgb(255, 0, 0), 0 0 40px rgb(255, 0, 0);
+      
+}
+
+
+/* Regras globais já definidas no topo do arquivo */
+
+/* Imagens fora do body */
+.img1, .img2, .img3 {
+    width: 400px;
+    height: auto;
+}
+
+header {
+    position: absolute; 
+    top: 20px;          
+    left: 50%;          
+    transform: translateX(-50%); 
+    width: 100%;
+    text-align: center;
+    z-index: 10;        
+}
+
+h1 {
+    color: white;
+    font-size: 80px;
+    font-family: 'Arial', sans-serif;
+    margin: 0;          
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+/* Fundo animado do coração (não precisa redefinir html/body) */
+
+.heart {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  opacity: 0;
+  animation-name: radiate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-fill-mode: backwards;
+  path {
+  fill: #fff;
+  }
+}
+
+
+.heart:nth-child(1) {
+  animation-delay: -1s;
+}
+.heart:nth-child(2) {
+  animation-delay: -2s;
+}
+.heart:nth-child(3) {
+  animation-delay: -3s;
+}
+.heart:nth-child(4) {
+  animation-delay: -4s;
+}
+.heart:nth-child(5) {
+  animation-delay: -5s;
+}
+
+@keyframes radiate {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  1% {
+    opacity: 0.15;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+
+/* Layer animations for extra fun
+//
+.heart path {
+  animation: 5s x infinite;
+  transform-origin: 50% 50%;
+}
+@keyframes x {
+  0% {
+    transform:scale(1)
+  }
+  10%{
+    transform: scale(0.95)
+  }
+
+  40% {
+    transform: scale(1)
+  }
+  60% {
+    transform: scale(0.95)
+  }
+
+  80% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+*/
+
+
+/*codigo music*/
+/* Permite que o player fique fixo no final da página */
+.player-container {
+  /* o posicionamento fixo garante que o player fique sempre visível, mesmo ao rolar a página */
+    position: fixed;
+    /* o bottom de 30px dá um pequeno espaço entre o player e a borda inferior da janela, evitando que fique colado */
+    bottom: 30px;
+    /*left de 50% e transform translateX(-50%) centralizam o player horizontalmente na tela, independentemente do tamanho da janela*/
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.9); /* Branco com leve transparência */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 15px 25px;
+    width: 450px;       /* Largura menor e fixa */
+    display: flex;      /* Alinha os itens em linha (horizontal) */
+    align-items: center;
+    gap: 20px;          /* Espaço entre os elementos internos */
+    z-index: 1000;       /* Garante que fique na frente do fundo */
+}
+
+/* Deixa a imagem da capa bem pequena */
+.img-container img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Ajusta o texto para não ocupar espaço demais */
+h2#title {
+    font-size: 14px;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+}
+
+h3#artist {
+    font-size: 12px;
+    margin: 0;
+}
+
+/* Compacta os controles */
+.navigation {
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn {
+    font-size: 16px;
+    margin: 0;
+}
+
+/*fim codigo de musica*/
