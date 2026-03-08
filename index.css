@@ -57,6 +57,8 @@ body {
 .card {
   position: relative; /* Permite posicionar o texto sobre a imagem */
   flex: 0 0 260px; /* Mantém 3 cards lado a lado e permite rolagem horizontal em telas menores */
+  width: 260px;
+  height: 340px;
   border-radius: 12px; /* Bordas arredondadas para um visual mais suave */
   overflow: hidden; /* Garante que o conteúdo não ultrapasse as bordas arredondadas */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
@@ -71,7 +73,7 @@ body {
 
 .card img {
     width: 100%;            /* A imagem ocupa toda a largura do card */
-    height: 200px;
+    height: 220px;
     object-fit: cover;      /* Corta a imagem sem distorcer para caber no espaço */
     transition: transform 0.3s ease; /* Transição suave para o zoom da imagem */
 }
@@ -119,49 +121,57 @@ h1 {
     color: white;
     font-size: 80px;
     font-family: 'Arial', sans-serif;
-    margin: 0;          
+    margin: 0;
     text-transform: uppercase;
-    /*deixar o texto neon*/
-    text-shadow: 0 0 5px rgb(255, 117, 117), 0 0 10px rgb(255, 255, 255), 0 0 20px rgb(255, 146, 146), 0 0 40px rgb(255, 255, 255);
-        
+    letter-spacing: 0.1em;
+    text-shadow:
+        0 0 6px rgba(255, 0, 0, 0.95),
+        0 0 12px rgba(255, 120, 120, 0.55),
+        0 0 18px rgba(255, 180, 180, 0.25);
 }
+
 /*textos h3*/
 
 .texto1 {
     position: relative;
     margin: 40px auto;
-    max-width: 900px;
+    max-width: 920px;
+    padding: 24px 18px;
     text-align: center;
     z-index: 10; /* Garante que o texto fique na frente de outros elementos */
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 14px;
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.55);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 h3 {
     color: white;
     font-size: 24px;
     font-family: 'Arial', sans-serif;
-    margin: 10px 0;          
+    margin: 10px 0;
     text-transform: uppercase;
 }
 
 .texto1 p {
-    color: rgb(255, 186, 186);
-    border-radius: 8px;
-    border: #911e29 2px solid;
-    /* O BOX SHADOW Adiciona uma sombra para dar um efeito de profundidade */
-    box-shadow: 5px 5px 10px rgb(66, 6, 6);
-    font-size: 20px;
-    font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif; 
-    margin: 0 auto;
-    /* O BACKGROUND COLOR Adiciona um fundo vermelho escuro para destacar o texto */
-    background-color: rgb(66, 15, 15);
-     /*transformar todo o texto de um elemento em letras maiúsculas*/
-        text-transform: uppercase;
-  /*deixar o texto neon*/
-    text-shadow: 0 0 5px rgb(255, 0, 0), 0 0 10px rgb(255, 0, 0), 0 0 20px rgb(255, 0, 0), 0 0 40px rgb(255, 0, 0);
-        /*aumentar o fundo em volta do texto*/
-    padding: 20px 30px; /* 40px de espaço em cima e embaixo, 60px nas laterais */
-    max-width: 900px;
-    width: 100%;
+    color: rgba(255, 200, 200, 0.95);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 80, 80, 0.85);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    font-size: 18px;
+    line-height: 1.6;
+    font-family: Impact, Haettenschweiler, Franklin Gothic Bold, Charcoal, Helvetica Inserat, Bitstream Vera Sans Bold, Arial Black, sans-serif;
+    margin: 18px auto 0;
+    background-color: rgba(60, 0, 0, 0.75);
+    text-transform: uppercase;
+    text-shadow: 0 0 6px rgba(255, 0, 0, 0.6);
+    padding: 18px 28px 18px 42px;
+    max-width: 820px;
+    width: auto;
+    text-align: center;
 }
 
 
@@ -348,11 +358,11 @@ h3#artist {
         position: static !important;
         transform: none !important;
         display: flex !important;
-        flex-direction: row !important;
+        flex-direction: column !important;
         flex-wrap: nowrap !important;
-        width: 98% !important; /* Quase a tela toda, mas com respiro */
-        padding: 10px 5px !important;
-        gap: 8px !important; /* Espaço entre os cards */
+        width: 95% !important;
+        padding: 10px 8px !important;
+        gap: 14px !important;
         justify-content: center !important;
         margin: 15px auto !important;
         /* Mantém o fundo e borda para parecer como no desktop */
@@ -362,7 +372,7 @@ h3#artist {
     }
 
 
-    /* 1. Remove o posicionamento absoluto e ajuda a manter os contêineres em linha */
+    /* 1. Remove o posicionamento absoluto e ajuda a manter os contêineres em coluna */
     .container-galeria, 
     .container-galeria-bottom, 
     .texto1, 
@@ -373,24 +383,57 @@ h3#artist {
         margin: 20px auto;
     }
 
-    /* 2. Mantém os cards da galeria em linha com rolagem horizontal */
+    /* Ajustes adicionais para centralizar o texto neon e reduzir o efeito no mobile */
+    .texto1 {
+        max-width: 560px;
+        width: 100%;
+        padding: 18px 16px;
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.45);
+    }
+
+    h1 {
+        text-shadow:
+            0 0 5px rgba(255, 0, 0, 0.9),
+            0 0 10px rgba(255, 120, 120, 0.45);
+    }
+
+    .texto1 p {
+        text-shadow: 0 0 4px rgba(255, 0, 0, 0.55);
+        box-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
+    }
+
+    /* 2. Ajusta os cards para caberem em uma coluna e responsividade */
     .container-galeria, 
     .container-galeria-bottom {
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: nowrap;
-        align-items: flex-start;
-        gap: 12px;
-        overflow-x: auto;
+        align-items: center;
+        gap: 16px;
+        overflow-x: hidden;
     }
 
-    /* 3. Mantém o mesmo estilo de texto do desktop */
+    .card {
+        flex: 0 0 92%;
+        max-width: 520px;
+        width: 92%;
+        height: 340px;
+    }
+
+    .card img {
+      /* o height da um zoom out para mostrar mais da imagem em telas pequenas, evitando cortes excessivos */
+        height: 450px;
+        object-fit: contain; /* Menos zoom: mostra mais da imagem em telas pequenas */
+        object-position: center center;
+    }
+
+    /* 3. Ajusta o tamanho dos textos para telas menores */
     h1 {
-        font-size: 80px;
+        font-size: 62px;
     }
 
-    p {
-        font-size: 20px;
-        padding: 20px 30px;
+    .texto1 p {
+        font-size: 18px;
+        padding: 16px 18px 16px 34px;
     }
 
     /* 4. Ajusta o player de música para caber na tela do celular */
@@ -407,13 +450,13 @@ h3#artist {
     }
 
     h2#title {
-        max-width: 100px;
+        max-width: 120px;
         font-size: 12px;
     }
 
     /* 5. Garante que o body não tenha espaços vazios gigantes */
     body {
-        padding-bottom: 120px; /* Espaço para o player fixo */
+        padding-bottom: 140px; /* Espaço para o player fixo */
         height: auto;
     }
 }
