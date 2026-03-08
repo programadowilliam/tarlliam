@@ -150,7 +150,7 @@ p {
 }
 
 
-/* Regras globais já definidas no topo do arquivo */
+
 
 /* Imagens fora do body */
 .img1, .img2, .img3 {
@@ -326,7 +326,7 @@ h3#artist {
 
 
 /* Ajustes para Telas Mobile (até 768px) */
-@media (max-width: 768px) {
+@media (max-width: 640px) {
     
     /* 1. Remove o posicionamento absoluto para o conteúdo fluir verticalmente */
     .container-galeria, 
