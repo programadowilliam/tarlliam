@@ -12,6 +12,11 @@ const songs = [
     'Mania De Você - Rita Lee', 
     'Taylor Swift - Wildest Dreams',
     'Rita Lee - Lança Perfume',
+    'Coldplay - Adventure Of A Lifetime',
+    'dayglow - can i call you tonight',
+    'Cola - Lana Del Rey',
+    'Selena Gomez, benny blanco - Sunset Blvd',
+    'Bob Dylan - Knockin On Heavens Door',
     'Taylor Swift - Daylight'
 ];
 

@@ -93,7 +93,7 @@ margin-top: 800px;
 
 
 
-                /*parte dos cards PADRAO*/
+                /*parte dos cards PADRAO ACHO QUE SO MUDAR NA VERSÃO DESKTOP*/
 .card {
   position: relative; /* Permite posicionar o texto sobre a imagem */
   flex: 0 0 260px; /* Mantém 3 cards lado a lado e permite rolagem horizontal em telas menores */
@@ -113,9 +113,12 @@ margin-top: 800px;
 
 .card img {
     width: 100%;            /* A imagem ocupa toda a largura do card */
-    height: 220px;
+    height: 270px;
     object-fit: cover;      /* Corta a imagem sem distorcer para caber no espaço */
     transition: transform 0.3s ease; /* Transição suave para o zoom da imagem */
+    /* Move a imagem para baixo. 
+       Ajuste os '20px' para o valor que preferir */
+    transform: translateY(10px); 
 }
 
 .card:hover img {
@@ -465,16 +468,29 @@ h3#artist {
         height: 450px;
         object-fit: contain; /* Menos zoom: mostra mais da imagem em telas pequenas */
         object-position: center center;
+        /* Move a imagem para baixo. 
+       Ajuste os '20px' para o valor que preferir */
+    transform: translateY(0px); 
     }
 
-    /* 3. Ajusta o tamanho dos textos para telas menores */
+    /* 3. AQUIII!!!!    Ajusta o tamanho dos textos para telas menores */
     h1 {
-        font-size: 62px;
+        font-size: 44px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .texto1 {
+        max-width: 520px;
     }
 
     .texto1 p {
-        font-size: 18px;
-        padding: 16px 18px 16px 34px;
+        font-size: 15px;
+        line-height: 1.4;
+        padding: 12px 14px 12px 24px;
+        text-align: center;
     }
 
     /* 4. Ajusta o player de música para caber na tela do celular */
