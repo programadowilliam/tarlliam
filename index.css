@@ -53,6 +53,25 @@ body {
   background: rgba(255, 255, 255, 0.07);
 }
 
+/* Galeria 2 inferior (3 imagens adicionais) */
+.container-galeria-bottom2 {
+  position: relative;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  max-width: 900px;
+  width: 90%;
+  overflow-x: auto; /* Permite rolagem horizontal em telas menores */
+
+  border: 2px solid rgba(173, 37, 37, 0.9);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+
 /*parte dos cards*/
 .card {
   position: relative; /* Permite posicionar o texto sobre a imagem */
@@ -63,7 +82,7 @@ body {
   overflow: hidden; /* Garante que o conteúdo não ultrapasse as bordas arredondadas */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave ao passar o mouse */
-  background: #fff; /* Fundo branco para os cards */
+  background: #ffffff; /* Fundo branco para os cards */
 }
 
 .card:hover {

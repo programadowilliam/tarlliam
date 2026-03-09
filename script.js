@@ -8,9 +8,10 @@ const playIcon = document.getElementById('play-icon');
 
 // ATENÇÃO: Os nomes devem ser IDÊNTICOS aos arquivos na pasta 'music'
 const songs = [
-    'lana del rey - Every man get his wish', 
-    'Aaron Smith - Dancin KRONO Remix', 
+    'lana del rey - Every man get his wish',
+    'Mania De Você - Rita Lee', 
     'Taylor Swift - Wildest Dreams',
+    'Rita Lee - Lança Perfume',
     'Taylor Swift - Daylight'
 ];
 
