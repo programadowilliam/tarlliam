@@ -8,15 +8,20 @@ const playIcon = document.getElementById('play-icon');
 
 // ATENÇÃO: Os nomes devem ser IDÊNTICOS aos arquivos na pasta 'music'
 const songs = [
-    'lana del rey - Every man get his wish',
+    'Taylor Swift - Karma',
     'Mania De Você - Rita Lee', 
+    'lana del rey - Every man get his wish',
     'Taylor Swift - Wildest Dreams',
     'Rita Lee - Lança Perfume',
     'Coldplay - Adventure Of A Lifetime',
     'dayglow - can i call you tonight',
+    'Lana Del rey - love song',
     'Cola - Lana Del Rey',
     'Selena Gomez, benny blanco - Sunset Blvd',
     'Bob Dylan - Knockin On Heavens Door',
+    'Cazuza - Exagerado',
+    'ANAVITÓRIA, Lenine - Lisboa',
+    'Rita Lee - Minha vida',
     'Taylor Swift - Daylight'
 ];
 
